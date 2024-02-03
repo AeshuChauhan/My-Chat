@@ -1,2 +1,3 @@
-# My-Portfolio
-This is my 3d Portfolio for showcase me 
+# My-Chat
+This is my Chat Application
+
