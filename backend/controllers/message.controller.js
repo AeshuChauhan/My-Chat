@@ -56,7 +56,6 @@ export const sendMessage = asyncHandler(async (req, res) => {
     );
 });
 
-
 export const getMessage = asyncHandler(async (req, res) => {
     // CHECK: get needed data from request: 
     const { id: userToChatID } = req.params;
