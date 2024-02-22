@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Login() {
     return (
@@ -23,12 +24,13 @@ export default function Login() {
                         <input
                             type='password'
                             placeholder='Enter Password'
+                            autoComplete='off'
                             className='w-full input input-bordered h-10'
                         />
                     </div>
-                    <a href='#' className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
+                    <Link to='/signIn' className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
                         {"Don't"} have an account?
-                    </a>
+                    </Link>
 
                     <div>
                         <button className='btn btn-block btn-sm mt-2'>Login</button>

@@ -1,18 +1,24 @@
-const GenderCheckbox = () => {
+const GenderCheckbox = (props) => {
+    const { options, name, value, onChange } = props;
     return (
         <div className='flex'>
-            <div className='form-control'>
-                <label className={`label gap-2 cursor-pointer`}>
-                    <span className='label-text'>Male</span>
-                    <input type='checkbox' className='checkbox border-slate-900' />
-                </label>
-            </div>
-            <div className='form-control'>
-                <label className={`label gap-2 cursor-pointer`}>
-                    <span className='label-text'>Female</span>
-                    <input type='checkbox' className='checkbox border-slate-900' />
-                </label>
-            </div>
+            {
+                (options || []).map((option, key) => (
+                    <div className='form-control' key={option + "-" + key}>
+                        <label className={`label gap-2 cursor-pointer`}>
+                            <span className='label-text'>{option}</span>
+                            <input
+                                type='checkbox'
+                                name={name}
+                                className='checkbox border-slate-900'
+                                value={option}
+                                checked={value === option}
+                                onChange={onChange}
+                            />
+                        </label>
+                    </div>
+                ))
+            }
         </div>
     );
 };

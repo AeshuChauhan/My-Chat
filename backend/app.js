@@ -1,11 +1,14 @@
 // Accessibility : Access Dot ENV files
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 // Accessibility : Access routes and json files
 import express from 'express';
+import cors from 'cors';
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Accessibility : Access cookies files
 import cookieParser from 'cookie-parser';
