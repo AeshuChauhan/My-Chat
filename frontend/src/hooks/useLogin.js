@@ -9,7 +9,6 @@ export const useLogIn = () => {
 
     const logIn = async (payload) => {
         const isValid = validatePayload(payload)
-        console.log("🚀 ~ logIn ~ isValid:", isValid);
         if (!isValid) {
             toast.error("error validating payload");
             return false
